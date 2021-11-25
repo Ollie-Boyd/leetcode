@@ -44,7 +44,7 @@ class Solution:
         container_array = [[1]]
         while len(container_array) < numRows:
             prev_array = container_array[-1]
-            modified_prev_array = list(prev_array)
+            modified_prev_array = prev_array[:]
             modified_prev_array.insert(0,0)
             new_array = [x+y for x,y in zip(prev_array, modified_prev_array)]
             new_array.append(1)
